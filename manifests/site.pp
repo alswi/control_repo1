@@ -4,9 +4,7 @@ node default{
   content => 'This is my pp',
   owner => 'root',
   }
-   file { '/root/README':
-   owner => 'root',
-   }
+   
 
 
 

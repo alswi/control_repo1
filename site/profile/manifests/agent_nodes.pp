@@ -4,7 +4,7 @@ class profile::agent_nodes {
   dockeragent::node { 'db.puppet.vm': }
   host{
        'web.puppet.vm':
-       ensure = > present,
+       ensure => present,
        ip = > '172.18.0.3',
        }
   host{

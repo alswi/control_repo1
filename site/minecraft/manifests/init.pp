@@ -26,7 +26,7 @@ class minecraft(
   }
   file{'/etc/systemd/system/minecraft.service':
   ensure=>file,
-  content => epp(‘minecraft/minecraft.service.epp’, {
+  content => epp('minecraft/minecraft.service.epp', {
       install_dir => $install_dir,
     }),
   
@@ -34,7 +34,7 @@ class minecraft(
     service { 'minecraft':
     ensure => running,
     enable => true,
-    require => [Package[‘java’],File[‘/opt/minecraft/eula.txt’],File[‘/etc/systemd/system/minecraft.service’]],
+    require => [Package['java'],File['/opt/minecraft/eula.txt’],File[‘/etc/systemd/system/minecraft.service']],
   }
 
 
